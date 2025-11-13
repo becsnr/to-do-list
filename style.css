@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+:root {
+    --brown-dark: #4B2E05;   /* marrom escuro elegante */
+    --brown: #8B5E34;        /* marrom médio */
+    --beige: #D7B89C;        /* bege quente */
+    --cream: #F4E1C1;        /* creme claro */
+    --offwhite: #FAF7F0;     /* quase branco */
+
+    --choco-dark: #3B1F0B;   /* chocolate amargo */
+--caramel: #A97142;      /* caramelo */
+--toffee: #C89F72;       /* doce de leite */
+--latte: #EBD8C3;        /* leite com café */
+--cream: #F8F3ED;        /* quase branco */
+
+--espresso: #3C2A21;    /* marrom escuro frio */
+--mocha: #6B4F4F;       /* marrom médio acinzentado */
+--taupe: #9E7676;       /* marrom rosado */
+--sand: #DABEBE;        /* areia */
+--linen: #F5EBEB;       /* tom claro elegante */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3B1F0B;
+}
+
+section#container {
+    background-color: #D7B89C;
+    padding: 20px;
+    text-align: center;
+    line-height: 3em;
+    box-shadow: 0 4px 8px #4B2E05;
+    border-radius: 10px;
+    border: 2px solid #8B7D70;
+    width: 90%;
+}
+
+h1 {
+    color: #331F19;
+}
+
+p {
+    color: #331F19;
+    font-size: 1.1em;
+}
+
+button {
+    background-color: #60041A;
+    color: #F4F0EA;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #A34743;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+ul li {
+    background-color: #F4F0EA;
+    color: #331F19;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o campo de entrada */
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #8B7D70;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus {
+    border-color: #60041A;
+    box-shadow: inset 0 2px 4px rgba(96, 4, 26, 0.3);
+}
