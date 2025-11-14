@@ -1,16 +1,38 @@
+let tarefasGrupo = []
+
 function addTarefa() {
-    // let mensagem = "Tarefa adicionada com sucesso!";
 
-    let inputTarefa = document.getElementById('tarefa');
-    let tarefa = inputTarefa.value;
-    document.getElementById('msg').textContent += tarefa;
+    // pega o valor do input
+    const inputTarefa = document.getElementById('tarefa');
+    let tarefa = inputTarefa.value.trim(); // trim() tira tds os espaços em branco
 
-    let listaTarefas = document.getElementById('listaTarefas');
-    let novaTarefa = document.createElement('li');
+    const msg = document.getElementById('msg');
 
-    novaTarefa.textContent = tarefa;
+    if (tarefa == "") { 
+        let mensagemErro = "Por favor, digite uma tarefa!";
+        msg.textContent = mensagemErro;
+        msg.style.color = '#A34743';
+    } else {
+        let mensagemSucesso = "Tarefa adicionada com sucesso!";
+        msg.textContent = mensagemSucesso;
+        msg.style.color = '#28A745';
 
-    listaTarefas.appendChild(novaTarefa);
+        tarefasGrupo.push(tarefa);
+        renderizarTarefas();
+    }
 
+    // limpa o campo do input
     inputTarefa.value = "";
+}
+
+function renderizarTarefas() { // Renderizar significa mostrar algo na tela.
+    const listaTarefas = document.getElementById('listaTarefas');
+
+    listaTarefas.innerHTML = ""; // limpa a lista antes de renderizar
+    
+    for (let i = 0; i < tarefasGrupo.length; i++) {
+        let novaTarefa = document.createElement('li');
+        novaTarefa.textContent = tarefasGrupo[i];
+        listaTarefas.appendChild(novaTarefa);
+    }
 }
